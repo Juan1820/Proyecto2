@@ -13,31 +13,33 @@ import java.util.Scanner;
  */
 public class Trapecio extends Cuadrilatero{
     private double h,area;
+    private double L1,L2;
 
-    public Trapecio(double h, double area, double V1, double V2, double V3, double V4) {
-        super(V1, V2, V3, V4);
-        this.h = h;
-        this.area = area;
+    public Trapecio(Trapecio h, Trapecio area) {
+        h = h;
+        area = area;
+        this.L1 = L1;
+        this.L2 = L2;
     }
 
-  
-
-    public void Datos(){
-    Scanner leer = new Scanner(System.in);
-         System.out.println("Cual es elvalor de la base Mayor");
-        this.V1=leer.nextDouble();
-        System.out.println("Cual es elvalor de la base menor");
-        this.V3=leer.nextDouble();
-        System.out.println("Cual es elvalor de la altura");
-        h=leer.nextDouble();
+    public Trapecio( double X1, double X2, double Y1, double Y2) {
+        super(X1, X2, Y1, Y2);
+        h = h;
+        area = area;
+        this.L1 = L1;
+        this.L2 = L2;
     }
+
 
     @Override
     public void Area() {
         System.out.println("Area del Trapecio");
-        
-        if(this.V1!=this.V3){
-       area=(this.V1+this.V3)*(h)/2;
+        L1=X1+Y1;
+        L2=X2+Y2;
+        h=Y1+Y2;
+                
+        if(L1<L2){
+       area=(L1+L2)*(h)/2;
        
         System.out.println("El area del trapecio es de "+ area);
         }

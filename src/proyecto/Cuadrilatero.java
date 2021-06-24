@@ -10,49 +10,51 @@ package proyecto;
  * @author juanp
  */
 public abstract  class Cuadrilatero {
-    double V1,V2,V3,V4;
+   protected double X1,X2,Y1,Y2;
 
-    public Cuadrilatero(double V1, double V2, double V3, double V4) {
-        this.V1 = V1;
-        this.V2 = V2;
-        this.V3 = V3;
-        this.V4 = V4;
+    public Cuadrilatero() {
     }
 
-   
-
-    public double getV1() {
-        return V1;
+    public Cuadrilatero(double X1, double X2, double Y1, double Y2) {
+        this.X1 = X1;
+        this.X2 = X2;
+        this.Y1 = Y1;
+        this.Y2 = Y2;
     }
 
-    public void setV1(double V1) {
-        this.V1 = V1;
+    public double getX1() {
+        return X1;
     }
 
-    public double getV2() {
-        return V2;
+    public void setX1(double X1) {
+        this.X1 = X1;
     }
 
-    public void setV2(double V2) {
-        this.V2 = V2;
+    public double getX2() {
+        return X2;
     }
 
-    public double getV3() {
-        return V3;
+    public void setX2(double X2) {
+        this.X2 = X2;
     }
 
-    public void setV3(double V3) {
-        this.V3 = V3;
+    public double getY1() {
+        return Y1;
     }
 
-    public double getV4() {
-        return V4;
+    public void setY1(double Y1) {
+        this.Y1 = Y1;
     }
 
-    public void setV4(double V4) {
-        this.V4 = V4;
+    public double getY2() {
+        return Y2;
     }
 
+    public void setY2(double Y2) {
+        this.Y2 = Y2;
+    }
+
+    
 
     
     

@@ -13,35 +13,48 @@ import java.util.Scanner;
  */
 public class Cuadrado extends Cuadrilatero{
     private double area;
+    private double L1,L2,L3,L4;
 
-    public Cuadrado(double area, double V1, double V2, double V3, double V4) {
-        super(V1, V2, V3, V4);
+    public Cuadrado(double area) {
         this.area = area;
+        this.L1 = L1;
+        this.L2 = L2;
+         this.L3 = L3;
+        this.L4 = L4;
+    }
+
+    public Cuadrado( double X1, double X2, double Y1, double Y2) {
+        super(X1, X2, Y1, Y2);
+        this.area = area;
+        this.L1 = L1;
+        this.L2 = L2;
+         this.L3 = L3;
+        this.L4 = L4;
+    }
+
+    @Override
+    public void Area() {
+        System.out.println("Area del Cuadrado");
+        L1=X1+X2;
+        L2=X1+Y1;
+        L3=X2+Y2;
+        L4=Y2+Y1;
+        if(L1==L2&&L2==L3&&L3==L4){
+        area=L1*L2;
+            System.out.println("El Area del cuadrado es de "+ area);
+        }
+        else{
+        area=L1*L2;
+            System.out.println("El Area de la figura es de "+ area +" Pero no es un cuadrado");
+        }
+        
     }
 
     
     
-    public void datos(){
-    
-        Scanner leer = new Scanner(System.in);
-        System.out.println("Cual es el valor de un lado del cuadrado");
-        this.V1=leer.nextDouble();
-       
-    }
-    
-    @Override
-    public void Area(){
-        
-        System.out.println("Area del Cuadrado");        
-        area = this.V1*this.V1;
-        area = this.V2*this.V2;
-        area = this.V3*this.V3;
-        area = this.V4*this.V4;
-        
-        System.out.println("El area del cuadrado es de "+ area);
     
     
     
     
-}
+    
 }
